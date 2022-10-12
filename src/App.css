@@ -3,6 +3,7 @@
   padding: 30px 50px;
   border-radius: 10px;
   background: #f7f1ec;
+  max-width: 1500px;
 }
 
 .App .App-header {
