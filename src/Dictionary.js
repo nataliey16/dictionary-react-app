@@ -31,24 +31,29 @@ export default function Dictionary() {
           onChange={handleKeywordChange}
         >
           <div className="row">
-            <input
-              className="col-sm-6 form-control"
-              type="search"
-              placeholder="Enter a word"
-              autoFocus="on"
-            ></input>
-            <input
-              className="btn btn-primary col-sm-2"
-              type="submit"
-              value="Search"
-              onClick={handleSearchSubmit}
-            ></input>
+            <div className="col-lg-8 col-lg-8">
+              <input
+                className="form-control search-bar"
+                type="search"
+                placeholder="Enter a word"
+                autoFocus="on"
+              ></input>
+            </div>
+            <div className="col-lg-4 col-lg-4">
+              <input
+                className="btn btn-branding"
+                type="submit"
+                value="Search"
+                onClick={handleSearchSubmit}
+              ></input>
+            </div>
           </div>
         </form>
+        <div className="suggested-words">
+          suggested keywords: sunset, education, composting ...
+        </div>
       </section>
-      <section>
-        <Results results={results} />
-      </section>
+      <Results results={results} />
     </div>
   );
 }

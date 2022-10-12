@@ -20,9 +20,9 @@ export default function Results(props) {
         </section>
         {props.results.meanings.map(function (meaning, index) {
           return (
-            <section key={index}>
+            <div key={index}>
               <Meaning meaning={meaning} />
-            </section>
+            </div>
           );
         })}
       </div>
