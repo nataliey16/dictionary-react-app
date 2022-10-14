@@ -5,7 +5,7 @@ import Results from "./Results";
 import "./Dictionary.css";
 
 export default function Dictionary() {
-  let [keyword, setKeyword] = useState("sunset");
+  let [keyword, setKeyword] = useState("Serendipity");
   let [results, setResults] = useState("");
   let [loaded, setLoaded] = useState(false);
 

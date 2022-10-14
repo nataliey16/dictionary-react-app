@@ -2,7 +2,7 @@
   background: white;
   border-radius: 10px;
   margin: 20px;
-  padding: 40px 0;
+  padding: 40px 10px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -13,6 +13,7 @@
 .Dictionary .search-bar {
   border-radius: 30px;
   border: 2px solid #e0d2be;
+  font-weight: bolder;
   padding: 10px 60px;
   width: 100%;
 }
@@ -24,6 +25,12 @@
   color: white;
   width: 100%;
   padding: 10px 30px;
+  font-weight: bolder;
+}
+
+.Dictionary .btn-branding:hover {
+  transition: all 400ms ease-in-out;
+  color: #402a23;
 }
 
 .Dictionary .btn-branding:hover {
@@ -34,30 +41,6 @@
 .Dictionary .suggested-words {
   text-align: center;
   margin-top: 20px;
-}
-
-.Results section {
-  background: white;
-  margin: 20px;
-  padding: 20px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  font-family: "Playfair Display", serif;
-}
-
-.Results h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 40px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
-.Meaning section {
-  padding: 20px;
-}
-
-.Meaning h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 40px;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  color: #402a23;
+  font-weight: bolder;
 }
