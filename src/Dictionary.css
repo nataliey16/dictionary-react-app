@@ -4,6 +4,14 @@
   margin: 20px;
   padding: 40px 10px;
   font-family: "Montserrat", sans-serif;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.Dictionary .header-question {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .Dictionary .Dictionary-search-engine {

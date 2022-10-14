@@ -5,7 +5,7 @@ import Results from "./Results";
 import "./Dictionary.css";
 
 export default function Dictionary() {
-  let [keyword, setKeyword] = useState("Serendipity");
+  let [keyword, setKeyword] = useState("sunset");
   let [results, setResults] = useState("");
   let [loaded, setLoaded] = useState(false);
 
@@ -31,6 +31,7 @@ export default function Dictionary() {
     return (
       <div className="Dictionary">
         <section>
+          <h1 className="header-question">What word do you want to look up?</h1>
           <form
             className="Dictionary-search-engine"
             onChange={handleKeywordChange}
@@ -40,7 +41,7 @@ export default function Dictionary() {
                 <input
                   className="form-control search-bar"
                   type="search"
-                  placeholder="Enter a word"
+                  placeholder="Example: sunset"
                   autoFocus="on"
                 ></input>
               </div>
