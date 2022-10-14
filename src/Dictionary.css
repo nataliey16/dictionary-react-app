@@ -12,18 +12,23 @@
 }
 .Dictionary .search-bar {
   border-radius: 30px;
-  border: 1px solid #e0d2be;
-  padding: 10px 50px;
+  border: 2px solid #e0d2be;
+  padding: 10px 60px;
   width: 100%;
 }
 
 .Dictionary .btn-branding {
   border-radius: 30px;
   background: #e0d2be;
-  border: #e0d2be;
+  border: 3px solid #e0d2be;
   color: white;
   width: 100%;
   padding: 10px 30px;
+}
+
+.Dictionary .btn-branding:hover {
+  border: 3px solid #e0d2be;
+  color: #402a23;
 }
 
 .Dictionary .suggested-words {
