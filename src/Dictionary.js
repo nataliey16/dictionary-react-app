@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import { MagnifyingGlass } from "react-loader-spinner";
 import axios from "axios";
 import Results from "./Results";
 import "./Dictionary.css";
 
 export default function Dictionary() {
-  let [keyword, setKeyword] = useState("");
+  let [keyword, setKeyword] = useState("sunset");
   let [results, setResults] = useState("");
   let [loaded, setLoaded] = useState(false);
 
   function handleSearchResponse(response) {
     setResults(response.data[0]);
+    setLoaded(true);
   }
 
   function search() {
@@ -23,11 +25,6 @@ export default function Dictionary() {
 
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
-  }
-
-  function load() {
-    setLoaded(true);
-    search();
   }
 
   if (loaded) {
@@ -58,14 +55,29 @@ export default function Dictionary() {
             </div>
           </form>
           <div className="suggested-words">
-            suggested keywords: sunset, education, composting ...
+            Suggested keywords: sunset, education, composting ...
           </div>
         </section>
         <Results results={results} />
       </div>
     );
   } else {
-    load();
-    return <div>Loading...</div>;
+    search();
+    return (
+      <div className="Loading text-center">
+        <div className="Loading-spinner">
+          <MagnifyingGlass
+            visible={true}
+            height="100"
+            width="100"
+            ariaLabel="MagnifyingGlass-loading"
+            wrapperStyle={{}}
+            wrapperClass="MagnifyingGlass-wrapper"
+            glassColor="#c0efff"
+            color="#e15b64"
+          />
+        </div>
+      </div>
+    );
   }
 }
