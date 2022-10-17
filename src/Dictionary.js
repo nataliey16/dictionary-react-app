@@ -21,6 +21,7 @@ export default function Dictionary() {
 
   function handleSearchSubmit(event) {
     event.preventDefault();
+    search();
   }
 
   function handleKeywordChange(event) {
