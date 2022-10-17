@@ -2,21 +2,37 @@ import React, { useState } from "react";
 import { MagnifyingGlass } from "react-loader-spinner";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("sunset");
   let [results, setResults] = useState("");
   let [loaded, setLoaded] = useState(false);
+  let [photos, setPhotos] = useState(null);
 
-  function handleSearchResponse(response) {
+  function handleDictionarySearchResponse(response) {
     setResults(response.data[0]);
     setLoaded(true);
   }
 
+  function handlePexelsResponse(response) {
+    setPhotos(response.data.photos);
+  }
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(handleSearchResponse);
+    axios.get(apiUrl).then(handleDictionarySearchResponse);
+
+    let pexelsApiKey =
+      "563492ad6f917000010000018203fdecdc824f56918529eacac1df37";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios
+      .get(pexelsApiUrl, {
+        headers: headers,
+      })
+      .then(handlePexelsResponse);
   }
 
   function handleSearchSubmit(event) {
@@ -61,6 +77,7 @@ export default function Dictionary() {
           </div>
         </section>
         <Results results={results} />
+        <Photos photos={photos} />
       </div>
     );
   } else {
@@ -75,8 +92,8 @@ export default function Dictionary() {
             ariaLabel="MagnifyingGlass-loading"
             wrapperStyle={{}}
             wrapperClass="MagnifyingGlass-wrapper"
-            glassColor="#c0efff"
-            color="#e15b64"
+            glassColor="#f0ece2"
+            color="#596e79"
           />
         </div>
       </div>
