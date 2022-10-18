@@ -93,7 +93,7 @@ export default function Dictionary() {
             wrapperStyle={{}}
             wrapperClass="MagnifyingGlass-wrapper"
             glassColor="#f0ece2"
-            color="#596e79"
+            color="#8d9a86"
           />
         </div>
       </div>

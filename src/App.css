@@ -1,6 +1,25 @@
+.App hr.hr-text {
+  padding: 0;
+  border: none;
+  height: 2px;
+  background-image: linear-gradient(to right, #f0f0f0, #8f8f8f, #f0f0f0);
+}
+
+.App hr.hr-text::after {
+  content: "§";
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(40deg);
+  transform-origin: 50% 50%;
+  padding: 0.4rem;
+  border-radius: 20px;
+  background-color: #f7f1ec;
+}
+
 .App {
-  margin: 20px 0;
-  padding: 20px 12px;
+  margin: 30px 0;
+  padding: 30px 12px;
   border-radius: 10px;
   background: #f7f1ec;
   max-width: 1200px;
@@ -11,7 +30,7 @@
   font-size: 50px;
   font-family: "Playfair Display", serif;
   margin: auto;
-  padding: 30px 0;
+  padding: 5px 0;
   color: #2f162b;
 }
 

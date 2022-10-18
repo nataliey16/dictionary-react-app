@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App container-fluid">
       <header className="App-header">Dictionary</header>
+      <hr className="hr-text" />
       <Dictionary />
       <footer className="app-footer">
         This project was coded by
@@ -27,6 +28,7 @@ function App() {
         >
           Netlify.
         </a>
+        <hr className="hr-text" />
       </footer>
     </div>
   );

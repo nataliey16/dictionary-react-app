@@ -13,9 +13,11 @@
   list-style: none;
 }
 
-@media (max-width: 957px) {
-  .Synonyms ul li {
-    float: center;
-    width: 33.3%;
+@media (max-width: 350px) {
+  .Synonyms ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 13px;
   }
 }
